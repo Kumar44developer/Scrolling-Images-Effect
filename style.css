@@ -36,6 +36,11 @@ h2{
   .card:nth-child(even){
     transform: translateX(-200%) rotate(90deg) scale(0.1);
   }
+ .card:nth-child(odd){
+    transform: translateX(-200%) rotate(90deg) scale(0.1);
+  }
+
+
 
 
 
