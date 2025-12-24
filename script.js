@@ -6,4 +6,8 @@ function animateCards(){
         card.forEach((singleCard)=>{
                     const cardTop = singleCard.getBoundingClientRect().top;
 
+        let toSlidIn = cardTop < checkingBottom;
+
+            
+
 
