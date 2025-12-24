@@ -7,6 +7,7 @@ function animateCards(){
                     const cardTop = singleCard.getBoundingClientRect().top;
 
         let toSlidIn = cardTop < checkingBottom;
+                if(toSlidIn){
 
             
 
