@@ -8,6 +8,8 @@ function animateCards(){
 
         let toSlidIn = cardTop < checkingBottom;
                 if(toSlidIn){
+                 singleCard.classList.add("slidingIn");
+
 
             
 
