@@ -10,6 +10,11 @@ function animateCards(){
                 if(toSlidIn){
                  singleCard.classList.add("slidingIn");
                 }else{
+                     singleCard.classList.remove("slidingIn");
+        }
+    });
+
+}
 
 
 
