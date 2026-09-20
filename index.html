@@ -3,32 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrolling Images</title>
+    <title>Scrolling Images Studio - Dynamic Viewport Motion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
-    <div class="card"><h2>A Blue Flower</h2></div>
+    <div id="progressBar" class="scroll-progress-bar"></div>
+
+    <header class="hero-section">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Viewport Intersection Motion</span>
+        </div>
+        <h1 class="hero-title">Scroll Images Effect</h1>
+        <p class="hero-subtitle">Interactive scroll-triggered choreography featuring dynamic viewport detection, alternating translation physics, and responsive imagery.</p>
+        
+        <div class="stats-toolbar">
+            <span id="visibleCount" class="stat-pill">Scanning viewport...</span>
+            <button id="toggleAnimBtn" class="action-btn" type="button" aria-label="Toggle animation mode">Animation: Alternating</button>
+        </div>
+        
+        <div class="scroll-cue">
+            <span>Scroll Down to Discover</span>
+            <svg class="scroll-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+        </div>
+    </header>
+
+    <main id="cardsGallery" class="cards-container mode-alternate">
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Botanical</span>
+                <h2>A Blue Flower</h2>
+                <p>Gentle sapphire petals reflecting morning dew droplets under filtered forest light.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Alpine</span>
+                <h2>Emerald Valley Peaks</h2>
+                <p>Granite peaks emerging above alpine pine forests under sweeping sunrise skies.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Fauna</span>
+                <h2>Golden Feline Gaze</h2>
+                <p>Captivating amber eyes illuminated by soft natural ambient sunlight.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Coastal</span>
+                <h2>Cerulean Coastline</h2>
+                <p>Rhythmic azure tides breaking softly over pristine golden sandbars.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Woodland</span>
+                <h2>Nordic Pine Canopy</h2>
+                <p>Towering evergreen forest shrouded in atmospheric morning mountain mist.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Celestial</span>
+                <h2>Aurora Borealis</h2>
+                <p>Luminescent green cosmic curtains undulating over frozen arctic fjords.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Dusk</span>
+                <h2>Crimson Horizon</h2>
+                <p>Radiant twilight painting silhouetted treetops across serene western horizons.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Wilderness</span>
+                <h2>Glacial Waterfall Canyon</h2>
+                <p>Crystal meltwater cascading through primordial moss-covered basalt cliffs.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Nightscape</span>
+                <h2>Starry Mountain Ridge</h2>
+                <p>The Milky Way stretching across crystalline alpine snow-capped spires.</p>
+            </div>
+        </div>
+
+        <div class="card" style="--bg-img: url('https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1200&q=80');">
+            <div class="card-overlay">
+                <span class="card-tag">Flora</span>
+                <h2>Wildflower Meadows</h2>
+                <p>Vibrant spring wildflowers blooming across sun-drenched rolling hillside pastures.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <p>Scroll Images Effect &bull; Built with performant vanilla DOM &amp; CSS hardware acceleration.</p>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" type="button" aria-label="Scroll to top of page">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
     <script src="script.js"></script>
 </body>
 </html>
-
-
-    
