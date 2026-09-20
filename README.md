@@ -51,13 +51,13 @@ graph TD
 
 ```text
 Scrolling-Images-Effect/
-├── .gitignore               Standard Git exclusion patterns
-├── index.html               Semantic gallery markup, hero header, and controls
-├── README.md                Startup documentation and architecture specification
-├── script.js                Scroll listener, animation engine, and UI handlers
-├── style.css                Responsive styling, animation modes, and color system
+├── .gitignore             
+├── index.html              
+├── README.md                
+├── script.js              
+├── style.css              
 └── tests/
-    └── test_scroll_engine.js Unit test suite for viewport calculations
+    └── test_scroll_engine.js 
 ```
 
 ---
